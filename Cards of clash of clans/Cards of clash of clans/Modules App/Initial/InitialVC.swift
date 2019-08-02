@@ -15,6 +15,8 @@ class InitialVC: BaseVC {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func onStart(_ sender: Any) {
+    }
+    
 }
 
