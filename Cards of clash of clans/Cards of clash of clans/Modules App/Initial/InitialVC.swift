@@ -12,10 +12,11 @@ class InitialVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "Clash of Clans Preview"
     }
 
     @IBAction func onStart(_ sender: Any) {
+        self.navigationController?.pushViewController(ListCardsVC(), animated: false)
     }
     
 }
