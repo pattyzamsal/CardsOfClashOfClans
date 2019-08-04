@@ -10,15 +10,15 @@ import UIKit
 
 class CardCell: UITableViewCell {
 
+    @IBOutlet weak var lbCardName: UILabel!
+    @IBOutlet weak var lbCardType: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    func setCardCell(name: String, type: String) {
+        lbCardName.text = name
+        lbCardType.text = type
+    }
 }
