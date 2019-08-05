@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class BaseModel {
+    
+    private var view: BaseViewProtocol
+    
+    init(view: BaseViewProtocol) {
+        self.view = view
+    }
+}
+
+extension BaseModel: BaseModelProtocol {
+    func sendMessageWithRepeat(title: String, message: String) {
+        self.view.alertErrorsWithRepeat(title: title, message: message)
+    }
+}
