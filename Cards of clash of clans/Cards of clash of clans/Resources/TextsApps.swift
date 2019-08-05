@@ -21,6 +21,7 @@ enum TextsApps: String {
     //MARK: constants
     case baseURL = "Base Url"
     case png = ".png"
+    case noDescription = "The description of this card is unavailable"
     
     //MARK: errors
     case withoutInternetTitle = "Without connection"
