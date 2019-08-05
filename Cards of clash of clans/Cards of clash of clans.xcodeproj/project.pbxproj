@@ -20,6 +20,8 @@
 		7E0564B922F78A9400BBAA1B /* ComponentViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0564B822F78A9400BBAA1B /* ComponentViewDelegate.swift */; };
 		7E0564BB22F79B5B00BBAA1B /* ListCardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0564BA22F79B5B00BBAA1B /* ListCardsPresenter.swift */; };
 		7E0564BD22F7AD8400BBAA1B /* TextsApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0564BC22F7AD8400BBAA1B /* TextsApps.swift */; };
+		7E0564C122F7B20400BBAA1B /* DetailCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0564C022F7B20400BBAA1B /* DetailCardModel.swift */; };
+		7E0564C322F7B21200BBAA1B /* DetailCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0564C222F7B21200BBAA1B /* DetailCardPresenter.swift */; };
 		7E0A8F0922F3EBD800A197BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0A8F0822F3EBD800A197BD /* AppDelegate.swift */; };
 		7E0A8F0B22F3EBD800A197BD /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0A8F0A22F3EBD800A197BD /* InitialVC.swift */; };
 		7E0A8F0E22F3EBD800A197BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E0A8F0C22F3EBD800A197BD /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		7E0564B822F78A9400BBAA1B /* ComponentViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentViewDelegate.swift; sourceTree = "<group>"; };
 		7E0564BA22F79B5B00BBAA1B /* ListCardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardsPresenter.swift; sourceTree = "<group>"; };
 		7E0564BC22F7AD8400BBAA1B /* TextsApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsApps.swift; sourceTree = "<group>"; };
+		7E0564C022F7B20400BBAA1B /* DetailCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardModel.swift; sourceTree = "<group>"; };
+		7E0564C222F7B21200BBAA1B /* DetailCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardPresenter.swift; sourceTree = "<group>"; };
 		7E0A8F0522F3EBD800A197BD /* Cards of clash of clans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cards of clash of clans.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0A8F0822F3EBD800A197BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E0A8F0A22F3EBD800A197BD /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
@@ -159,6 +163,22 @@
 			path = ProgressView;
 			sourceTree = "<group>";
 		};
+		7E0564BE22F7B1E100BBAA1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E0564C022F7B20400BBAA1B /* DetailCardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E0564BF22F7B1E900BBAA1B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7E0564C222F7B21200BBAA1B /* DetailCardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		7E0A8EFC22F3EBD800A197BD = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +252,8 @@
 		7E0A8F2022F3F43700A197BD /* Detail Card */ = {
 			isa = PBXGroup;
 			children = (
+				7E0564BF22F7B1E900BBAA1B /* Presenter */,
+				7E0564BE22F7B1E100BBAA1B /* Model */,
 				7E05649B22F63E7000BBAA1B /* View */,
 			);
 			path = "Detail Card";
@@ -425,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0564C322F7B21200BBAA1B /* DetailCardPresenter.swift in Sources */,
 				7E0564B922F78A9400BBAA1B /* ComponentViewDelegate.swift in Sources */,
 				7E0564AF22F782DF00BBAA1B /* UIViewController+Extension.swift in Sources */,
 				7E0A8F3722F4034000A197BD /* CardCell.swift in Sources */,
@@ -433,6 +456,7 @@
 				7E0A8F0B22F3EBD800A197BD /* InitialVC.swift in Sources */,
 				7E05649E22F63E9700BBAA1B /* DetailCardVC.swift in Sources */,
 				7E0564BD22F7AD8400BBAA1B /* TextsApps.swift in Sources */,
+				7E0564C122F7B20400BBAA1B /* DetailCardModel.swift in Sources */,
 				7E0A8F2E22F3F55100A197BD /* BasePresenter.swift in Sources */,
 				7E0A8F2A22F3F51A00A197BD /* BaseVC.swift in Sources */,
 				7E0A8F2C22F3F54200A197BD /* BaseModel.swift in Sources */,
