@@ -12,7 +12,7 @@ class InitialVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Clash of Clans Preview"
+        self.navigationItem.title = TextsApps.titleInitial.rawValue
     }
 
     @IBAction func onStart(_ sender: Any) {
