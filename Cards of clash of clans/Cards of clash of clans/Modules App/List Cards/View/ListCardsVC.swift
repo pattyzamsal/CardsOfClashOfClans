@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ListCardsVC: UIViewController {
+class ListCardsVC: BaseVC {
 
     @IBOutlet weak var tvListCards: UITableView!
     
-    private var listOfCards: [(name: String, type: String)] = [("Arrows", "Spell"), ("Bomber", "Troop"), ("Archers", "Troop")]
+    private lazy var presenter = ListCardsModel(view: self)
+    
+    private var listOfCards = [CardDecodable]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +28,17 @@ class ListCardsVC: UIViewController {
         let nib = UINib(nibName: "CardCell", bundle: nil)
         tvListCards.register(nib, forCellReuseIdentifier: "cardCell")
         
-        orderCards()
+        showProgress()
+        presenter.obtainAllCards()
     }
 
     private func orderCards() {
         listOfCards = listOfCards.sorted(by: { $0.name < $1.name })
         tvListCards.reloadData()
+    }
+    
+    override func backToPreviousState() {
+        self.navigationController?.popViewController(animated: false)
     }
 }
 
@@ -57,7 +64,15 @@ extension ListCardsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailCardVC = DetailCardVC()
-        detailCardVC.specificCard = listOfCards[indexPath.row].name
+        detailCardVC.specificCard = listOfCards[indexPath.row]
         self.navigationController?.pushViewController(detailCardVC, animated: false)
+    }
+}
+
+extension ListCardsVC: ListCardsViewProtocol {
+    func onSuccessListCards(cards: [CardDecodable]) {
+        hideProgress()
+        listOfCards = cards
+        orderCards()
     }
 }
