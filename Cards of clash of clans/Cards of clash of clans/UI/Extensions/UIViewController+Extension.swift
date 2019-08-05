@@ -17,9 +17,9 @@ extension UIViewController {
                          handlerCancel: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         if hasCancelButton {
-            alert.addAction(alert.createAction(title: "Cancel", handler: handlerCancel))
+            alert.addAction(alert.createAction(title: TextsApps.cancel.rawValue, handler: handlerCancel))
         }
-        alert.addAction(alert.createAction(title: "Accept", handler: handlerAccept))
+        alert.addAction(alert.createAction(title: TextsApps.accept.rawValue, handler: handlerAccept))
         
         return alert
     }

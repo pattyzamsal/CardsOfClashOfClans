@@ -22,11 +22,11 @@ class ListCardsModel: BaseModel {
                 if let listCards = cards {
                     self.onSuccessListCards(cards: listCards)
                 } else {
-                    self.sendMessageWithRepeat(title: "Something wrong happened", message: "Your request cann't be processed, try again")
+                    self.sendMessageWithRepeat(title: TextsApps.errorWithDownloadTitle.rawValue, message: TextsApps.errorWithDownloadMessage.rawValue)
                 }
             }
         } else {
-            self.sendMessageWithRepeat(title: "Without connection", message: "Please, review your connection to internet")
+            self.sendMessageWithRepeat(title: TextsApps.withoutInternetTitle.rawValue, message: TextsApps.withoutInternetMessage.rawValue)
         }
     }
 }

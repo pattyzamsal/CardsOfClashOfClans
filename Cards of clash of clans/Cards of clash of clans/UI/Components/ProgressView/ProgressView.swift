@@ -18,7 +18,7 @@ class ProgressView: UIView {
     init(delegate: ComponentViewDelegate) {
         let frame = CGRect(x: 0, y: 0, width: deviceSize.width, height: deviceSize.height)
         super.init(frame: frame)
-        Bundle.main.loadNibNamed("ProgressView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(TextsApps.progressView.rawValue, owner: self, options: nil)
         self.delegate = delegate
         self.view!.frame = frame
         self.delegate.add(view: self, isProgressView: true)

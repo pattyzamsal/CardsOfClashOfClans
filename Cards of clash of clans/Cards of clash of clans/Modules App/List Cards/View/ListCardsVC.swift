@@ -19,14 +19,14 @@ class ListCardsVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "List of cards"
+        self.navigationItem.title = TextsApps.listCards.rawValue
         self.navigationItem.backBarButtonItem?.title = ""
         
         tvListCards.delegate = self
         tvListCards.dataSource = self
         tvListCards.separatorStyle = .none
-        let nib = UINib(nibName: "CardCell", bundle: nil)
-        tvListCards.register(nib, forCellReuseIdentifier: "cardCell")
+        let nib = UINib(nibName: TextsApps.cardCell.rawValue, bundle: nil)
+        tvListCards.register(nib, forCellReuseIdentifier: TextsApps.identifierCardCell.rawValue)
         
         showProgress()
         presenter.obtainAllCards()
@@ -53,7 +53,7 @@ extension ListCardsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tvListCards.dequeueReusableCell(withIdentifier: "cardCell") as! CardCell
+        let cell = tvListCards.dequeueReusableCell(withIdentifier: TextsApps.identifierCardCell.rawValue) as! CardCell
         
         if !listOfCards.isEmpty {
             cell.setCardCell(name: listOfCards[indexPath.row].name, type: listOfCards[indexPath.row].type)
